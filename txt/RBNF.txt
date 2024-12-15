@@ -1,0 +1,34 @@
+<topRule> ==>    PROGRAM <identifier> VAR <varsBlok> ; BEGIN <codeBlok> END
+<varsBlok> ==>    LONGINT <identifier> [{<commaAndIdentifier>}];
+<identifier> ==>    <low_letter> {<up_letter>|<number>} {0,8}
+<commaAndIdentifier> ==>    , <identifier>
+<codeBlok> ==>    BEGIN <write> | <read> | <assignment> | <ifStatement> 
+  | <goto_statement> | < labelRule > |  < forToOrDownToDoRule> | <while>  | <repeatUntil> END
+<read> ==>    SCAN ( <identifier> );
+<write> ==>    PRINT ( <equation> | <stringRule>);
+<assignment> ==>    <identifier> ==>    <equation>;
+<ifStatement> ==>    IF ( <equation> ) <codeBlok> <elseStatement>
+<elseStatement> ==> ELSE <codeBlok>
+<goto_statement> ==>  GOTO <ident>;
+<labelRule> ==> <identifier>:
+< forToOrDownToDoRule> ==>  FOR <assignment> TO | DOWNTO <equation> DO <codeBlok> 
+<while> ==> WHILE (<equation>) <codeBlok>
+<repeatUntil> ==> REPEAT <codeBlok> Until (<equation<)
+<equation> ==>    <signedNumber> | <identifier> |  <notRule> [{ <operationAndIdentOrNumber> | <equation> }]
+< notRule > ==>    <notOperation> <signedNumber> | <identifier> | <equation>
+<operationAndIdentOrNumber> ==>    <mult> | <arithmetic> | <logic> | <compare> <signedNumber> | <identifier> | <equation> 
+<arithmetic> ==>    ADD | SUB
+<mult> ==>    MUL | DIV | MOD
+<logic> ==>    AND | OR
+<notOperation> ==>    NOT
+<compare> ==>    EQ | NE | < | >
+<stringRule> ==>    " <string> "
+<comment> ==> <LComment> <string> <RComment>
+<LComment> ==>  {
+<RComment> ==>  }
+<string> ==>    { <low_letter> | <up_letter> | <number> }
+<signedNumber>	==>    [<sign>] <digit>[{digit}]
+<sign> ==>  + | -  
+<low_letter> ==>    a|b|c|d|e|f|g|h|i|j|k|l|n|m|o|p|q|r|s|t|u|v|w|x|y|z
+<up_letter>	==>    A|B|C|D|E|F|G|H|I|J|K|L|N|M|O|P|Q|R|S|T|U|V|W|X|Y|Z
+<digit> ==>    0|1|2|3|4|5|6|7|8|9
