@@ -1,0 +1,26 @@
+﻿  stdafx.cpp
+  Controller.cpp
+  BackusRule.cpp
+  Generator.cpp
+  TokenParser.cpp
+  TokenRegister.cpp
+  AssignmentRule.cpp
+  EquationRule.cpp
+  IdentRule.cpp
+  ForRule.cpp
+  GotoRule.cpp
+  IfRule.cpp
+  RepeatUntilRule.cpp
+  WhileRule.cpp
+  ReadRule.cpp
+  String.cpp
+  StringRule.cpp
+  VarsBlokRule.cpp
+  WriteRule.cpp
+  sp_kursova.cpp
+  Symbols.cpp
+  Generating Code...
+  Compiling...
+  TablePrinter.cpp
+  Generating Code...
+  sp_kursova.vcxproj -> D:\University\3course\SP 2\coursework\project\build_Win32\Debug\sp_kursova.exe
